@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tracker</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <div id="new-book" class="jumbotron">
+       <!--form to add new book-->
+        <h2>New Book</h2>
+        <form id="new-book-form">
+            <div class="form-group">
+                <label for="new-book-name">Title</label>
+                <input type="text" id="new-book-name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="new-book-author">Author</label>
+                <input type="text" id="new-book-author" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="new-book-genre">Genre</label>
+                <input type="text" id="new-book-genre" class="form-control" required>
+            </div>
+            <button type="submit" id="create-new-book" class="btn btn-primary form-control">Add Book</button>
+        </form>
+    </div>
+<!-- Search bar to look up a book
+    <div id="search-books" class="mb-3">
+        <h2>Search Books</h2>
+        <input type="text" id="search-input" class="form-control" placeholder="Search by title...">
+    </div> -->
+<!--List of books in system-->
+    <div id="book-list">
+        <h2>Book List</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Read</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="book-table-body">
+                <!-- Book data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
